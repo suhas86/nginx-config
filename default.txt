@@ -21,19 +21,19 @@ server {
 	listen 80;
 	listen [::]:80 default_server ipv6only=on;
 
-	root /home/bvbi/mywork/got/;
+	root /home/suhas/mywork/got/;
 	index index.html index.htm;
 
 	# Make site accessible from http://localhost/
 	server_name localhost;
         error_page 404 /custom_404.html;
         location = /custom_404.html {
-                root /home/bvbi/mywork/error/;
+                root /home/suhas/mywork/error/;
                 internal;
         }
 	error_page 500 502 503 504 /50x.html;
     location = /50x.html {
-        root /home/bvbi/mywork/error/;
+        root /home/suhas/mywork/error/;
     }
 
 	location / {
